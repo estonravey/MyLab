@@ -19,7 +19,6 @@ pipeline{
         stage ('Test'){
             steps {
                 echo ' testing......'
-
             }
         }
 
@@ -30,12 +29,7 @@ pipeline{
                 withSonarQubeEnv('sonarqube'){ // You can override the credential to be used
                      sh 'mvn sonar:sonar'
                 }
-
             }
-        }
-
-        
-        
+        }        
     }
-
 }
