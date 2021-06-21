@@ -19,7 +19,6 @@ pipeline{
         stage ('Test'){
             steps {
                 echo ' testing......'
-
             }
         }
 
@@ -30,12 +29,33 @@ pipeline{
                 withSonarQubeEnv('sonarqube'){ // You can override the credential to be used
                      sh 'mvn sonar:sonar'
                 }
-
             }
-        }
-
-        
-        
+        }       
     }
-
 }
+
+/*
+must be enclosed within the pipeline block {}
+- Directives: agent, tools, environment, etc
+
+Stages --> stage --> steps
+
+agent: execute this pipeline on any avaialable agents
+- locate an executor
+- create a workspace for entire pipeline
+- need a tools sections: preinstall tools or add tool to path 
+
+STAGES ( 3 stages)
+-GUILD
+sh (execute shell command) 'mvn clean install package'
+
+-TEST
+
+
+-DEPLOY
+
+
+
+
+
+*/
