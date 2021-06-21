@@ -25,12 +25,9 @@ pipeline{
         // Stage3 : Publish the source code to Sonarqube
         stage ('Sonarqube Analysis'){
             steps {
-                echo ' Source code published to Sonarqube for SCA......'
-                withSonarQubeEnv('sonarqube'){ // You can override the credential to be used
-                     sh 'mvn sonar:sonar'
+                echo ' deploying ...'
                 }
             }
-<<<<<<< HEAD
         }       
     }
 }
@@ -60,8 +57,3 @@ sh (execute shell command) 'mvn clean install package'
 
 
 */
-=======
-        }        
-    }
-}
->>>>>>> b724c4a5c1251509e8a809365245ef24b21cbd09
