@@ -35,7 +35,7 @@ pipeline{
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "EstonDevopsLab-SNAPSHOT" : "EstonDevopsLab-RELEASE"
 
                     nexusArtifactUploader artifacts: 
-                    [[artifactId: 'VinayDevOpsLab', 
+                    [[artifactId: "${ArtifactId}", 
                     classifier: '', 
                     file: 'target/VinayDevOpsLab-0.0.4-SNAPSHOT.war', 
                     type: 'war']], 
