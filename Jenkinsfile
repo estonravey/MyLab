@@ -30,6 +30,7 @@ pipeline{
                      sh 'mvn sonar:sonar'
                 }
             }
+<<<<<<< HEAD
         }       
     }
 }
@@ -59,3 +60,8 @@ sh (execute shell command) 'mvn clean install package'
 
 
 */
+=======
+        }        
+    }
+}
+>>>>>>> b724c4a5c1251509e8a809365245ef24b21cbd09
