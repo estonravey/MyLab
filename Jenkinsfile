@@ -32,16 +32,16 @@ pipeline{
         stage('Publish to Nexus') {
             steps {
                 script {
-                    def NexusRepo = Version.endsWith("SNAPSHOT") ? "EstonDevopsLab-SNAPSHOT" : "EstonDevopsLab-RELEASE"
+                    def NexusRepo = Version.endsWith("SNAPSHOT") ? "EstonDevopsLab-SNAPSHOT" : "EstonDevOpsLab-RELEASE"
 
                     nexusArtifactUploader artifacts: 
                     [[artifactId: "${ArtifactId}", 
                     classifier: '', 
-                    file: "target/${ArtifactId}-${Version}.war",  
+                    file: "target/${ArtifactId}-${Version}.war", 
                     type: 'war']], 
                     credentialsId: '5c5108be-e9bc-4cb8-b9df-f21fd10fbe3c', 
                     groupId: "${GroupId}", 
-                    nexusUrl: '172.20.10.235:8081', 
+                    nexusUrl: '3.101.79.249:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: "${NexusRepo}", 
