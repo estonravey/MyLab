@@ -40,12 +40,12 @@ pipeline{
                     file: 'target/VinayDevOpsLab-0.0.4-SNAPSHOT.war', 
                     type: 'war']], 
                     credentialsId: '5c5108be-e9bc-4cb8-b9df-f21fd10fbe3c', 
-                    groupId: 'com.vinaysdevopslab', 
+                    groupId: "${GroupId}", 
                     nexusUrl: '172.20.10.235:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: "${NexusRepo}", 
-                    version: '0.0.4-SNAPSHOT'
+                    version: "${Version}"
                 }
             }
         }
