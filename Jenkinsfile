@@ -27,7 +27,7 @@ pipeline{
                 echo ' testing ...'
             }
         }
-
+/*
         // stage 3 - Publish the artifacts to Nexus
         stage('Publish to Nexus') {
             steps {
@@ -49,7 +49,7 @@ pipeline{
                 }
             }
         }
-
+*/
         // stage 4 -print some information 
         stage ('Print Environment Variables') {
             steps {
