@@ -51,8 +51,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Hello</h1>
-        <p>This is Vinays DevOps AWS Lab</p>
+        <h1>Aloha</h1>
+        <p>This is Eston's DevOps AWS Lab</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
     </div>
@@ -91,7 +91,7 @@
     <hr>
 
     <footer>
-        <p>&copy; vinay's devops lab 2020-2021</p>
+        <p>&copy; Eston's devops lab 2021</p>
     </footer>
 </div> <!-- /container -->
 

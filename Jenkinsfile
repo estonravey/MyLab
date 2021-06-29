@@ -29,8 +29,8 @@ pipeline{
             steps {
                 script {
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "my-devops-lab-SNAPSHOT" : "my-devops-lab-RELEASE"
-                    // script below created with snippet generator in Jenkins
-                    // varables declared above in "environment" block
+                        // script below created with snippet generator in Jenkins
+                        // varables declared above in "environment" block
                     nexusArtifactUploader artifacts: 
                     [[artifactId: "${ArtifactId}", 
                     classifier: '', 
@@ -38,27 +38,12 @@ pipeline{
                     type: 'war']], 
                     credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
                     groupId: "${GroupId}", 
-                    nexusUrl: '13.57.186.154:8081', 
+                    nexusUrl: '54.176.131.3:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: "${NexusRepo}", 
                     version: "${Version}"
                 }
-/*                // testing
-                script{
-                    nexusArtifactUploader artifacts: 
-                    [[artifactId: 'EstonDevOpsTest', 
-                    classifier: '', 
-                    file: 'target/com.estondevopstest-0.0.3-SNAPSHOT.war', 
-                    type: 'war']], 
-                    credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
-                    groupId: 'com.estondevopstest', 
-                    nexusUrl: '172.20.10.100:8081', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: 'my-devops-lab-SNAPSHOT', 
-                    version: '0.0.3-SNAPSHOT'     
-                } */
             }
         }
 
