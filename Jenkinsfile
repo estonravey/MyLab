@@ -4,14 +4,12 @@ pipeline{
     tools {
         maven 'maven'
     }
-
     environment{
         ArtifactId = readMavenPom().getArtifactId()
         Version = readMavenPom().getVersion()
         Name = readMavenPom().getName()
         GroupId = readMavenPom().getGroupId()
     }
-
     stages {
         // specify various stages within stages
         // stage 1 - build
@@ -20,20 +18,19 @@ pipeline{
                 sh 'mvn clean install package'
             }
         }
-
         // stage 2 - testing
         stage ('Test') {
             steps {
                 echo ' testing ...'
             }
         }
-/*
         // stage 3 - Publish the artifacts to Nexus
         stage('Publish to Nexus') {
             steps {
                 script {
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "EstonDevopsLab-SNAPSHOT" : "EstonDevOpsLab-RELEASE"
-
+                    // script below created with snippet generator in Jenkins
+                    // varables declared above in "environment" block
                     nexusArtifactUploader artifacts: 
                     [[artifactId: "${ArtifactId}", 
                     classifier: '', 
@@ -49,7 +46,7 @@ pipeline{
                 }
             }
         }
-*/
+
         // stage 4 -print some information 
         stage ('Print Environment Variables') {
             steps {
