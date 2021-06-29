@@ -36,7 +36,7 @@ pipeline{
                     classifier: '', 
                     file: "target/${ArtifactId}-${Version}.war", 
                     type: 'war']], 
-                    credentialsId: '5c5108be-e9bc-4cb8-b9df-f21fd10fbe3c', 
+                    credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
                     groupId: "${GroupId}", 
                     nexusUrl: '13.57.186.154:8081', 
                     nexusVersion: 'nexus3', 
@@ -44,6 +44,21 @@ pipeline{
                     repository: "${NexusRepo}", 
                     version: "${Version}"
                 }
+/*                // testing
+                script{
+                    nexusArtifactUploader artifacts: 
+                    [[artifactId: 'EstonDevOpsTest', 
+                    classifier: '', 
+                    file: 'target/com.estondevopstest-0.0.3-SNAPSHOT.war', 
+                    type: 'war']], 
+                    credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
+                    groupId: 'com.estondevopstest', 
+                    nexusUrl: '172.20.10.100:8081', 
+                    nexusVersion: 'nexus3', 
+                    protocol: 'http', 
+                    repository: 'my-devops-lab-SNAPSHOT', 
+                    version: '0.0.3-SNAPSHOT'     
+                } */
             }
         }
 
