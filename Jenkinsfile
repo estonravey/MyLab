@@ -31,14 +31,12 @@ pipeline{
                     def NexusRepo = Version.endsWith("SNAPSHOT") ? "my-devops-lab-SNAPSHOT" : "my-devops-lab-RELEASE"
                         // script below created with snippet generator in Jenkins
                         // varables declared above in "environment" block
-                    nexusArtifactUploader artifacts: [
-                        [
+                    nexusArtifactUploader artifacts: [[
                             artifactId: "${ArtifactId}", 
                             classifier: '', 
                             file: "target/${ArtifactId}-${Version}.war", 
                             type: 'war'
-                        ]
-                    ], 
+                    ]], 
                     credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
                     groupId: "${GroupId}", 
                     nexusUrl: '54.176.131.3:8081', 
@@ -70,7 +68,7 @@ pipeline{
                     transfers: [
                         sshTransfer(
                             cleanRemote: false,
-                            execCommand: '/opt/playbooks/ansible-playbook downloadanddeploy.yaml -i /opt/playbooks/hosts',
+                            execCommand: 'ansible-playbook /opt/playbooks/downloadanddeploy.yaml -i /opt/playbooks/hosts',
                             execTimeout: 120000
                         ) 
                     ], 
