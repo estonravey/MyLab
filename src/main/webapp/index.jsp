@@ -54,7 +54,7 @@
         <h1>Aloha</h1>
         <p>This is Eston's DevOps Lab</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-        <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p>
+        <!-- <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p> --->
     </div>
 </div>
 
@@ -62,7 +62,7 @@
     <!-- Example row of columns -->
     <div class="row">
         <div class="col-md-4">
-            <h2>Git,Maven and GitHub</h2>
+            <h2>Git, Maven and GitHub</h2>
             <p>I have used Git for version controlling. Maven as a build tool. I have used GitHub as my source code repository </p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
