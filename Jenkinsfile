@@ -28,7 +28,7 @@ pipeline{
         stage('Publish to Nexus') {
             steps {
                 script {
-                    def NexusRepo = Version.endsWith("SNAPSHOT") ? "EstonDevopsLab-SNAPSHOT" : "EstonDevOpsLab-RELEASE"
+                    def NexusRepo = Version.endsWith("SNAPSHOT") ? "my-devops-lab-SNAPSHOT" : "my-devops-lab-RELEASE"
                     // script below created with snippet generator in Jenkins
                     // varables declared above in "environment" block
                     nexusArtifactUploader artifacts: 
