@@ -39,7 +39,7 @@ pipeline{
                     ]], 
                     credentialsId: '374b7981-16d8-437e-9666-0b5e419b97d0', 
                     groupId: "${GroupId}", 
-                    nexusUrl: '54.176.131.3:8081', 
+                    nexusUrl: '54.215.219.233:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: "${NexusRepo}", 
@@ -77,3 +77,5 @@ pipeline{
                     verbose: false)])
             }
         }
+    }    
+}
