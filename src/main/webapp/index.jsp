@@ -52,7 +52,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Aloha</h1>
-        <p>This is Eston's DevOps Lab version 0.0.7.1 - Demo</p>
+        <p>This is Eston's DevOps Lab version 0.0.7.2 - Demo</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
         <!-- <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p> --->
     </div>
