@@ -54,6 +54,7 @@
         <h1>Aloha</h1>
         <p>This is Eston's DevOps Lab version 0.0.7.3 - More Docker deployments</p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn less &raquo;</a></p>
         <!-- <p><a class="btn btn-primary btn-lg" role="button">Success!! more &raquo;</a></p> --->
     </div>
 </div>
